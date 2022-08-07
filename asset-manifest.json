@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/emilioantonio29/Challenge_SocialMediaLogin/static/css/main.87c9a9e6.css",
+    "main.js": "/emilioantonio29/Challenge_SocialMediaLogin/static/js/main.885ecb11.js",
+    "static/js/787.6304ed20.chunk.js": "/emilioantonio29/Challenge_SocialMediaLogin/static/js/787.6304ed20.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/emilioantonio29/Challenge_SocialMediaLogin/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
+    "static/media/bootstrap-icons.woff2?": "/emilioantonio29/Challenge_SocialMediaLogin/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
+    "static/media/logo.svg": "/emilioantonio29/Challenge_SocialMediaLogin/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/emilioantonio29/Challenge_SocialMediaLogin/index.html",
+    "main.87c9a9e6.css.map": "/emilioantonio29/Challenge_SocialMediaLogin/static/css/main.87c9a9e6.css.map",
+    "main.885ecb11.js.map": "/emilioantonio29/Challenge_SocialMediaLogin/static/js/main.885ecb11.js.map",
+    "787.6304ed20.chunk.js.map": "/emilioantonio29/Challenge_SocialMediaLogin/static/js/787.6304ed20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87c9a9e6.css",
+    "static/js/main.885ecb11.js"
+  ]
+}
