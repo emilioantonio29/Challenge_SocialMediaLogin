@@ -8,7 +8,7 @@ const Footer = () => {
         <footer style={{marginTop: "auto", minHeight: "5vh"}} className="bg-secondary d-flex align-items-center justify-content-center" >
             <div>
                 <div>
-                    <p style={{color: "white", marginTop: "10px"}}>© 2022 | Know more about me: <a 
+                    <p style={{color: "white", marginTop: "10px"}}>© 2022 | about me: <a 
                         href="https://www.linkedin.com/in/emilio-martinez-gonzalez-0b0195165/" 
                         target="_blank" rel="noreferrer"
                         style={{fontWeight: "bold", color: "white"}}
