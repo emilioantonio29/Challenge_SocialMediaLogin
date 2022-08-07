@@ -5,14 +5,14 @@ const FacebookAuth = () => {
       <>
         <div className="jumbotron bg-light" style={{borderRadius: "20px", marginTop: "20px", marginBottom: "20px"}}>
             <div className="container">
-                <h1 className="display-4">Facebook Login!</h1>
-                <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <h1 className="display-4">Facebook Login</h1>
+                <p className="lead">soon next week...</p>
                 <hr className="my-4"/>
-                <p>FRONTEND AUTH:</p>
-                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <h5>FRONTEND AUTH:</h5>
+                <button className="btn btn-primary btn-lg"  role="button">Lorem ipsum</button>
                 <hr className="my-4"/>
-                <p>BACKEND SIMULATOR:</p>
-                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <h5>BACKEND SIMULATOR:</h5>
+                <button className="btn btn-primary btn-lg" role="button">Lorem ipsum</button>
                 <br/>
                 <br/>
             </div>

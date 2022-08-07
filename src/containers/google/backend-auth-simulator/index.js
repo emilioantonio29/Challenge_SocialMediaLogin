@@ -14,7 +14,8 @@ const GoogleBackendAuth = () => {
     <div className="jumbotron bg-light" style={{borderRadius: "20px", marginTop: "20px"}}>
         <div>
             <hr className="my-4"/>
-            <p>BACKEND SIMULATOR:</p>
+            <h5>BACKEND SIMULATOR:</h5>
+            <br/>
             <button className="btn btn-primary btn-lg">Lorem Ipsum</button>
             <br/>
             <br/>

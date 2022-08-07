@@ -1,6 +1,13 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
+import axios from "axios"; // i will figure how to validate if a Google Client Id es Valid.
 import Swal from "sweetalert2";
+import jwtDecode from "jwt-decode";
+
+/*
+  THIS IS WHERE GOOGLE CLIENT ID IS VALIDATED:
+  GET
+	https://accounts.google.com/gsi/button?theme=outline&size=large&client_id=YOURCLIENTID&iframe_id=gsi_719113_24778&as=cozfla9pwAIIqHSez+vuPA
+*/
 
 const GoogleFrontendAuth = () => {
   
@@ -9,11 +16,14 @@ const GoogleFrontendAuth = () => {
   const [display, setDisplay] = useState("none");
   const [JWT, setJWT] = useState("");
   const [copySuccess, setCopySuccess] = useState('Copy to clipboard');
-  
+  const [decodedJWT, setDecodedJWT] = useState("");
 
   function copyToClipboard(e) {
     navigator.clipboard.writeText(JWT)
     setCopySuccess("Copied")
+    setTimeout(() => {
+      setCopySuccess('Copy to clipboard');
+    }, 4000);
   };
   
   const renderFunction = () => {
@@ -31,6 +41,8 @@ const GoogleFrontendAuth = () => {
     if(response.credential){
       console.log("JWT ID TOKEN: ", response.credential)
       setJWT(response.credential)
+      setDecodedJWT(JSON.stringify(jwtDecode(response.credential)))
+      console.log("JWT ID TOKEN DECODED: ", jwtDecode(response.credential))
     }
   }
 
@@ -54,11 +66,12 @@ const GoogleFrontendAuth = () => {
     <div>
         <div>
             <hr className="my-4"/>
-            <p>FRONTEND AUTH:</p>
-            
+            <h5>FRONTEND AUTH:</h5>
+            <br/>
+            <p><i class="bi bi-1-circle blockquote"></i> You need to create the API OAuth Client ID, wich will provide you a Google Client Id. Put your id in the input and press Deploy Google Button.</p>
             <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                <span style={{minWidth: "20vh"}} className="input-group-text" id="inputGroup-sizing-default">Google Client Id</span>
+                <div className="input-group-prepend ajust-box">
+                  <span className="input-group-text" id="inputGroup-sizing-default">Google Client Id:</span>
                 </div>
                 <input 
                   onChange={(e)=> setClientId(e.target.value)} value={clientId}
@@ -66,37 +79,59 @@ const GoogleFrontendAuth = () => {
                   type="text" className="form-control" 
                   aria-label="Default" 
                   aria-describedby="inputGroup-sizing-default"/>
-                <div className="input-group-append">
-                  <button style={{minWidth: "20vh"}} onClick={renderFunction} className="btn btn-outline-secondary" type="button">Deploy Google Button</button>
+                <div className="input-group-append ajust-box">
+                  <button style={{width: "100%"}} onClick={renderFunction} className="btn btn-primary" type="button">Deploy Google Button</button>
                 </div>
             </div>
 
             {clientId ? 
-              <div style={{width: "100%"}} className="d-flex justify-content-center">
-                  <div style={{width: "", display: display}}>
-                      <div id="signInDiv"></div>
-                  </div>
-              </div>
+              <>
+                <br/>
+                <p><i class="bi bi-2-circle blockquote"></i> Press Deploy Google Button after you put your ID: If your Google Cliend ID is valid, the sign up button will allow you to login with your account.</p>
+                <div className="d-flex justify-content-center">
+                    <div style={{width: "", display: display}}>
+                        <div id="signInDiv"></div>
+                    </div>
+                </div>
+                
+              </>
               :
               <></>
             }
             
             {JWT !== "" ? 
-              <div  className="input-group mb-3" style={{marginTop: "15px"}}>
-                  <div className="input-group-prepend">
-                  <span style={{minWidth: "20vh"}} className="input-group-text" id="inputGroup-sizing-default">JWT Id Token</span>
-                  </div>
-                  <input 
-                    disabled
-                    value={JWT}
-                    placeholder="This is your JWT: use this to validate the user in the backend" 
-                    type="text" className="form-control" 
-                    aria-label="Default" 
-                    aria-describedby="inputGroup-sizing-default"/>
-                  <div className="input-group-append">
-                    <button style={{minWidth: "20vh"}} onClick={copyToClipboard} className="btn btn-outline-secondary" type="button">{copySuccess}</button>
-                  </div>
+<>  
+              <br/>
+              <p><i class="bi bi-3-circle blockquote"></i> When you login successfully, google will respond a JWT Id Token; you can use this to show user data in the frontend, or validate the authentication in your backend</p>
+              <div className="input-group mb-3">
+                <div className="input-group-prepend ajust-box">
+                  <span className="input-group-text" id="inputGroup-sizing-default">JWT Id Token Generated:</span>
+                </div>
+                <input 
+                  disabled
+                  value={JWT}
+                  placeholder="Put your google client id to test the login. Do not worry, this app will not keep your client id." 
+                  type="text" className="form-control" 
+                  aria-label="Default" 
+                  aria-describedby="inputGroup-sizing-default"/>
+                <div className="input-group-append ajust-box">
+                  <button 
+                    style={{width: "100%"}} 
+                    onClick={copyToClipboard} 
+                    className="btn btn-primary"
+                    type="button">{copySuccess}</button>
+                </div>
               </div>
+              <br/>
+              <p><i class="bi bi-4-circle blockquote"></i> Use JWT Decode to obtain the token info and show it in the client. </p>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">JWT Decoded info parsed to string:</label>
+                <textarea disabled class="form-control" id="exampleFormControlTextarea1" rows="3" value={decodedJWT}></textarea>
+              </div>
+              <br/>
+              <p><i class="bi bi-5-circle blockquote"></i> You can take your JWT ID Token (copy to clipboard) y simulate the validation that would run at your backend. </p>
+
+            </>
               :
               <></>
             }
