@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Challenge_SocialMediaLogin/static/css/main.87bdbc6a.css",
-    "main.js": "/Challenge_SocialMediaLogin/static/js/main.423632f5.js",
+    "main.css": "/Challenge_SocialMediaLogin/static/css/main.6fe12080.css",
+    "main.js": "/Challenge_SocialMediaLogin/static/js/main.31f3a5fd.js",
     "static/js/787.6304ed20.chunk.js": "/Challenge_SocialMediaLogin/static/js/787.6304ed20.chunk.js",
     "static/media/bootstrap-icons.woff?": "/Challenge_SocialMediaLogin/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
+    "static/media/method2.png": "/Challenge_SocialMediaLogin/static/media/method2.54f4cff746444ee5adfb.png",
     "static/media/bootstrap-icons.woff2?": "/Challenge_SocialMediaLogin/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
+    "static/media/method1.png": "/Challenge_SocialMediaLogin/static/media/method1.e8f81f1d753992c75d23.png",
     "static/media/logo.svg": "/Challenge_SocialMediaLogin/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Challenge_SocialMediaLogin/index.html",
-    "main.87bdbc6a.css.map": "/Challenge_SocialMediaLogin/static/css/main.87bdbc6a.css.map",
-    "main.423632f5.js.map": "/Challenge_SocialMediaLogin/static/js/main.423632f5.js.map",
+    "main.6fe12080.css.map": "/Challenge_SocialMediaLogin/static/css/main.6fe12080.css.map",
+    "main.31f3a5fd.js.map": "/Challenge_SocialMediaLogin/static/js/main.31f3a5fd.js.map",
     "787.6304ed20.chunk.js.map": "/Challenge_SocialMediaLogin/static/js/787.6304ed20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87bdbc6a.css",
-    "static/js/main.423632f5.js"
+    "static/css/main.6fe12080.css",
+    "static/js/main.31f3a5fd.js"
   ]
 }
