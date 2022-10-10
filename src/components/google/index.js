@@ -14,7 +14,7 @@ const GoogleAuth = () => {
         <GoogleFrontendAuth/>
         <GoogleBackendAuth/>
     </div>
-</div>
+  </div>
 
   );
 }

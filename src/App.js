@@ -6,16 +6,26 @@ import GoogleAuth from './components/google';
 import FacebookAuth from './components/facebook';
 import NavBar from './components/navbar';
 import Footer from './components/footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/home';
+import GoogleAuthPage from './pages/google-auth';
+import FacebookAuthPage from './pages/facebook-auth';
+import NotFound from './pages/not-found';
+
 
 function App() {
   return (
     <>
-      <NavBar/>
-        <body style={{display: "flex", flexDirection: "column", minHeight: "85vh"}} className='container'>
-          <GoogleAuth/>
-          <FacebookAuth/>
-        </body>
-      <Footer/>
+      <BrowserRouter>
+        <NavBar/>
+          <Routes>
+            <Route path="/"  element={<HomePage/>}/>
+            <Route path="/google-auth"  element={<GoogleAuthPage/>}/>
+            <Route path="/facebook-auth"  element={<FacebookAuthPage/>}/>
+            <Route path="*"  element={<NotFound/>}/>
+          </Routes>
+        <Footer/>
+      </BrowserRouter>
     </>
   );
 }

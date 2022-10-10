@@ -77,18 +77,18 @@ const GoogleFrontendAuth = () => {
             <p><i className="bi bi-1-circle blockquote"></i> You need to create an API OAuth Client ID, wich will provide you a Google Client Id. Put your id in the input below and press Deploy Google Button.</p>
             <p><i className="bi blockquote"></i><strong>Info:</strong> If you don't have one, use our default Google Client Id. Leave the input empty and press <strong>Deploy Google Button.</strong></p>
             <div className="input-group mb-3">
-                <div className="input-group-prepend ajust-box">
-                  <span className="input-group-text" id="inputGroup-sizing-default">Google Client Id:</span>
-                </div>
-                <input 
-                  onChange={(e)=> setInputValue(e.target.value)} value={inputValue}
-                  placeholder="Put your google client id to test the login. Do not worry, this app will not keep your client id." 
-                  type="text" className="form-control" 
-                  aria-label="Default" 
-                  aria-describedby="inputGroup-sizing-default"/>
-                <div className="input-group-append ajust-box">
-                  <button style={{width: "100%"}} onClick={renderFunction} className="btn btn-primary" type="button">Deploy Google Button</button>
-                </div>
+              <div className="input-group-prepend ajust-box">
+                <span className="input-group-text" id="inputGroup-sizing-default">Google Client Id:</span>
+              </div>
+              <input 
+                onChange={(e)=> setInputValue(e.target.value)} value={inputValue}
+                placeholder="Put your google client id to test the login. Do not worry, this app will not keep your client id." 
+                type="text" className="form-control" 
+                aria-label="Default" 
+                aria-describedby="inputGroup-sizing-default"/>
+              <div className="input-group-append ajust-box">
+                <button style={{width: "100%"}} onClick={renderFunction} className="btn btn-primary" type="button">Deploy Google Button</button>
+              </div>
             </div>
 
             {clientId ? 
@@ -132,7 +132,7 @@ const GoogleFrontendAuth = () => {
               <br/>
               <p><i className="bi bi-4-circle blockquote"></i> Use JWT Decode to obtain the token info and show it in the client. </p>
               <div className="form-group">
-                <label for="exampleFormControlTextarea1">JWT Decoded info parsed to string:</label>
+                <label htmlFor="exampleFormControlTextarea1">JWT Decoded info parsed to string:</label>
                 <textarea disabled className="form-control" id="exampleFormControlTextarea1" rows="3" value={decodedJWT}></textarea>
               </div>
               <br/>
