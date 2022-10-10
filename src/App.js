@@ -19,10 +19,10 @@ function App() {
       <BrowserRouter>
         <NavBar/>
           <Routes>
-            <Route path="/"  element={<HomePage/>}/>
-            <Route path="/google-auth"  element={<GoogleAuthPage/>}/>
-            <Route path="/facebook-auth"  element={<FacebookAuthPage/>}/>
-            <Route path="*"  element={<NotFound/>}/>
+            <Route path="/Challenge_SocialMediaLogin"  element={<HomePage/>}/>
+            <Route path="/Challenge_SocialMediaLogin/google-auth"  element={<GoogleAuthPage/>}/>
+            <Route path="/Challenge_SocialMediaLogin/facebook-auth"  element={<FacebookAuthPage/>}/>
+            <Route path="/Challenge_SocialMediaLogin/*"  element={<NotFound/>}/>
           </Routes>
         <Footer/>
       </BrowserRouter>

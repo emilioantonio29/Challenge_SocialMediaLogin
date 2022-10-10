@@ -17,13 +17,13 @@ const NavBar = () => {
             <div className=" navbar-collapse" id="navbarText" >
               <ul className="navbar-nav ">
                 <li className="nav-item">
-                  <NavLink to={`/`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact activeclassname="link-active">Home</NavLink>
+                  <NavLink to={`/Challenge_SocialMediaLogin/`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact activeclassname="link-active">Home</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to={`/google-auth`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact activeclassname="link-active">Google</NavLink>
+                  <NavLink to={`/Challenge_SocialMediaLogin/google-auth`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact activeclassname="link-active">Google</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to={`/facebook-auth`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact activeclassname="link-active">Facebook</NavLink>
+                  <NavLink to={`/Challenge_SocialMediaLogin/facebook-auth`} className={({ isActive }) => (isActive ? 'link-active' : 'text-link')} exact activeclassname="link-active">Facebook</NavLink>
                 </li>
               </ul>
             </div>
